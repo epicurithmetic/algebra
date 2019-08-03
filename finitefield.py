@@ -1,4 +1,4 @@
-# Finite Field Arithmetic
+#                        Finite Field Arithmetic
 
 # In order to determine whether or not the objects created are fields, we
 # need to be able to test irreducibility of polynomials modulo primes.
@@ -21,7 +21,7 @@ class FiniteField:
 
         Warning: you need to ensure that the polynomial entered when
                  initiating an instance is irreducible over the specified
-                 characteristic. 
+                 characteristic.
 
     '''
 

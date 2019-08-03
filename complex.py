@@ -1,4 +1,4 @@
-# Complex numbers.
+#                               Complex numbers
 class Complex:
 
     '''
