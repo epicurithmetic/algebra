@@ -1,5 +1,11 @@
 # Finite Field Arithmetic
 
+# In order to determine whether or not the objects created are fields, we
+# need to be able to test irreducibility of polynomials modulo primes.
+# Ofcourse in full generality, this is as difficult as detecting primality!
+#           --- For now we just trust that the input polynomial is
+#               an irreducible polynomial.
+
 class FiniteField:
 
 
@@ -12,6 +18,10 @@ class FiniteField:
 
         Polynomials are represented as lists. The index of the list
         corresponds to the degree of the term in the polynomial.
+
+        Warning: you need to ensure that the polynomial entered when
+                 initiating an instance is irreducible over the specified
+                 characteristic. 
 
     '''
 
