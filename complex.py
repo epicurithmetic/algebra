@@ -1,5 +1,4 @@
 # Complex numbers.
-
 class Complex:
 
     '''
@@ -15,7 +14,7 @@ class Complex:
         self.imaginary = imaginary
 
     def cartesian(self):
-        
+
         '''
             This method prints an imaginary number as a string.
             The representation is in Cartesian coordinates.
@@ -23,15 +22,26 @@ class Complex:
         '''
         return "%d + %di" % (self.real, self.imaginary)
 
+    def conjugate(self):
+
+        '''
+            This function returns the complex conjugate of the input.
+            For example: 3 + 2i is sent to 3 - 2i
+
+        '''
+
+        return Complex(self.real, -self.imaginary)
+
+
     # These methods don't refer to "self" as they are functions which
     # take multiple instances of the Complex class as inputs. As such
     # I have designated them as static methods.
     @staticmethod
-    def complex_addition(z,w):
+    def add(z,w):
         return Complex((z.real+w.real),(z.imaginary+w.imaginary))
 
     @staticmethod
-    def complex_multiplication(z,w):
+    def mult(z,w):
         real_part = (z.real*w.real - z.imaginary*w.imaginary)
         imaginary_part = (z.real*w.imaginary + z.imaginary*w.real)
         return Complex(real_part,imaginary_part)
@@ -39,5 +49,5 @@ class Complex:
 x = Complex(0,1)
 y = Complex(0,2)
 
-print Complex.cartesian(Complex.complex_addition(x,y))
-print Complex.cartesian(Complex.complex_multiplication(x,y))
+print Complex.cartesian(Complex.add(x,y))
+print Complex.cartesian(Complex.conjugate(x))
