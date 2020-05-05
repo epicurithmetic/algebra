@@ -49,5 +49,5 @@ class Complex:
 x = Complex(0,1)
 y = Complex(0,2)
 
-print Complex.cartesian(Complex.add(x,y))
-print Complex.cartesian(Complex.conjugate(x))
+print(Complex.cartesian(Complex.add(x,y)))
+print(Complex.cartesian(Complex.conjugate(x)))
